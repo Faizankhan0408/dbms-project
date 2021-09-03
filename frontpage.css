@@ -1,0 +1,21 @@
+.caption{
+	text-align:left;
+	color:red;
+	font-size:30px;
+	
+}
+.heading1{
+	text-align:left;
+	margin-top:7vw;
+	margin-left:50px;
+	font-size:5vw;
+	margin-bottom:8vw;
+}
+.heading2{font-size:20px;
+	text-align:left;
+	margin-top:-30px;
+	margin-left:50px;
+	margin-bottom:50px;
+}
+.para1{margin-bottom:50px;
+}
