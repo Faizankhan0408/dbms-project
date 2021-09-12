@@ -12,14 +12,14 @@
 	
   </head>
   <body>
-  <div class="container-fluid sticky-top" style="">
+   <div class="container-fluid sticky-top" style="">
   <div class="row">
   <nav class="navbar navbar-expand-lg navbar-light bg-light " style="" >
   <div class="container">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="job karlo.png" width=150 height=45 style=""/>
+    <img src="job karlo.jpg" width=80 height=45 style=""/>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	</br>
@@ -153,6 +153,92 @@
     </div>
   </div>
 </div>
+<!--hire talent modal-->
+<div class="modal fade" id="HireTalentModal" style="margin-top:50px" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Job Karlo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="Project Name" class="form-label"><h1>Choose a name for your project</h1></label>
+            <input type="text" class="form-control" value="e.g.Build me a website" id="input Project Name" aria-describedby="PROJECT">
+           
+          </div>
+		  <div class="mb-3">
+            <label for="Project Name" class="form-label"><h1>Tell us more about your project</h1></br><p style="font-size:20px;margin-top:-20px">Start with a bit about yourself or your business, and include an overview of what you need done.</p></label>
+            <input type="text" class="form-control" style="padding-bottom:100px" value="Describe Your Project here..." id="input Project Name" aria-describedby="PROJECT">
+           
+          </div>
+		  <div class="mb-3">
+		  <label for="Project Name" class="form-label"><h1>Upload a File</h1></br></label>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+			
+			<input type="file" name="fileToUpload" id="fileToUpload"  style="margin-left:-225px;margin-top:20px">
+			</input>
+			</form>
+			<hr>
+          </div>
+         <div class="mb-3">
+            <label for="Project Name" class="form-label"><h1>Required Skills</h1></label>
+            </br>
+           <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+			<input type="checkbox" class="btn-check" id="LogoDesign" autocomplete="off">
+			<label class="btn btn-outline-primary" for="LogoDesign">Logo Design</label>
+
+			<input type="checkbox" class="btn-check" id="Photoshop" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Photoshop">Photoshop</label>
+
+			<input type="checkbox" class="btn-check" id="Adds Design" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Adds Design">Adds Design</label>
+			<input type="checkbox" class="btn-check" id="Social Media Design" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Social Media Design">Social Media Design</label>
+			<input type="checkbox" class="btn-check" id="Logo Animation" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Logo Animation">Logo Animation</label>
+			<input type="checkbox" class="btn-check" id="Video Editing" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Video Editing">Video Editing</label>
+			<input type="checkbox" class="btn-check" id="Animated GIF's" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Animated GIF's">Animated GIF's</label>
+			<input type="checkbox" class="btn-check" id="Content Writing" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Content Writing">Content Writing</label>
+			<input type="checkbox" class="btn-check" id="Translation" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Translation">Translation</label>
+			<input type="checkbox" class="btn-check" id="Web Development" autocomplete="off">
+			<label class="btn btn-outline-primary" for="Web Development">Web Development</label>
+			</div>
+			
+			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" style="margin-top:25px">
+			<input type="checkbox" class="btn-check" id="Game Development" autocomplete="off">
+			<label class="btn btn-outline-warning" for="Game Development">Game Development</label>
+			<input type="checkbox" class="btn-check" id="Wordpress" autocomplete="off">
+			<label class="btn btn-outline-warning" for="Wordpress">Wordpress</label>
+			<input type="checkbox" class="btn-check" id="App Development" autocomplete="off">
+			<label class="btn btn-outline-warning" for="App Development">App Development</label>
+			<input type="checkbox" class="btn-check" id="Voiceover" autocomplete="off">
+			<label class="btn btn-outline-warning" for="Voiceover">Voiceover</label>
+			<input type="checkbox" class="btn-check" id="Remix & Mashup" autocomplete="off">
+			<label class="btn btn-outline-warning" for="Remix & Mashup">Remix & Mashup</label>
+			<input type="checkbox" class="btn-check" id="Social Media Marketing" autocomplete="off">
+			<label class="btn btn-outline-warning" for="Social Media Marketing">Social Media Marketing</label>
+			<input type="checkbox" class="btn-check" id="Sales & Marketing" autocomplete="off">
+			<label class="btn btn-outline-warning" for="Sales & Marketing">Sales & Marketing</label>
+			
+			
+			</div>
+			<hr>
+          </div>
+          <button type="submit" class="btn btn-danger">Post The Project</button>
+        </form>
+      </div>
+     <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- SIgn up Modal -->
@@ -203,7 +289,7 @@
      <p class="caption"  > Explore the online Freenlance community 
 	  Turn ideas into Reality</p>
 	  <a class="btn btn-outline-warning col-6 col-md-4" style="border-radius:10px" href="">Find work</a>
-	  <a class="btn btn-secondary col-6 col-md-4" style="border-radius:10px" href="">Hire Talent</a>
+	  <a class="btn btn-secondary col-6 col-md-4" data-bs-toggle="modal" data-bs-target="#HireTalentModal" style="border-radius:10px" href="">Hire Talent</a>
       </div>
 	  
     </div>
@@ -213,8 +299,8 @@
 	  	<div class="carousel-caption " >
        <p class="caption" >Explore the online Freenlance community
 	  Turn ideas into Reality</p>
-	   <a class="btn btn-outline-warning col-6 col-md-4" href="" style="border-radius:10px" >Find work</a>
-	  <a class="btn btn-secondary col-6 col-md-4 "  style="border-radius:10px" href="">Hire Talent</a>
+	   <a class="btn btn-outline-danger col-6 col-md-4" href="" style="border-radius:10px" >Find work</a>
+	  <a class="btn btn-warning col-6 col-md-4 " data-bs-toggle="modal" data-bs-target="#HireTalentModal" style="border-radius:10px" href="">Hire Talent</a>
       </div>
     </div>
 
@@ -362,7 +448,7 @@ Explore The Marketplace
 <div style="background-color:rgb(22,30,44);padding-top:100px">
 <div class="row container" style="margin-left:50px">
 <div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
- <img src="job karlo.png"  style=""/></br></br></br></br></br>
+ <img src="job karlo.png" height ="50" width="100"  style=""/></br></br></br></br></br>
 </div>
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="font-size:30px;margin-bottom:25px;color:white">Categories</h1>
