@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 $link = mysqli_connect('localhost', 'root', '', 'jk');
 $your_name=$_POST['your_name'];
 $username=$_POST['username'];
@@ -9,46 +12,26 @@ die('Failed to connect to server');
 } 
 $query="INSERT INTO users (your_name,username,email,password) Values ('$your_name','$username','$email','$password')";
 $results = mysqli_query($link, $query); 
-if($your_name)
-{if($password)
-	{
+
 if($results == FALSE) 
 {
-echo '<script type="text/javascript">
+// echo '<script type="text/javascript">
+//           window.onload = function () { alert("Usename taken or email already registered or all field not filled"); }
+// </script>';
+$_SESSION['status']="Please Fill the form Again";
+$_SESSION['status_code']="error";
 
-          window.onload = function () { alert("Usename taken or email already registered or all field not filled"); }
-
-</script>';
 include 'main.html';
 }
 else {
-	echo'<script type="text/javascript">
-
-          window.onload = function () { alert("Thank you for signing up"); }
-
-</script>';
+// 	echo'<script type="text/javascript">
+//           window.onload = function () { alert("Thank you for signing up"); }
+// </script>';
+$_SESSION['status']="Registred Successfully !!";
+$_SESSION['status_code']="success";
 include 'main.html';
 } 
-	}
-
-else{
-	echo'<script type="text/javascript">
-
-          window.onload = function () { alert("please enter password"); }
-
-</script>';
-	include 'main.html';
-}
-}
-
-
-else
-{echo'<script type="text/javascript">
-
-          window.onload = function () { alert("please fill your name"); }
-
-</script>';
-	include 'main.html';
-}
-
 ?> 
+<?php
+include 'script_sign.php';
+?>
