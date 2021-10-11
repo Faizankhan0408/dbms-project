@@ -82,11 +82,9 @@ else
 $Sales_Marketing=0;
 }
 else
-{ echo'<script type="text/javascript">
-           window.onload = function () { alert("please enter project name");} 
- </script>';
- 
-	include "main.html";
+{ $_SESSION['status']="Please Enter Project Name";
+            $_SESSION['status_code']="error";
+			include "main.html";
 	
 }
 
@@ -99,17 +97,17 @@ VALUES ('$ProjectName','$ProjectDescription','$email','$name','$LogoDesign','$Ph
 '$Wordpress','$AppDevelopment','$Voiceover','$Remix_Mashup','$SocialMediaMarketing','$Sales_Marketing')";
 $results = mysqli_query($link, $query);
 
-	echo'<script type="text/javascript">
-           window.onload = function () { alert("Project has been uploaded");} 
- </script>';
+	$_SESSION['status']="Project has been uploaded";
+            $_SESSION['status_code']="success";
+			include "main.html";
  
-	include "main.html";
+	
 
 }	
 else
-	{echo'<script type="text/javascript">
-           window.onload = function () { alert("Please login in to post");} 
- </script>';
- 
-	include "main.html";
+	{$_SESSION['status']="Please Log In to Post";
+            $_SESSION['status_code']="error";
+			include "main.html";
 }
+include "script_log.php";
+?>
