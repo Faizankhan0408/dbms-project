@@ -50,6 +50,7 @@ else
 	
 } 
 include "script_log.php";
+include "main.html";
 
 		
 ?>
