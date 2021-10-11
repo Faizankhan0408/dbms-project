@@ -45,15 +45,15 @@ else
 else
 {$_SESSION['status']="Please Enter Email";
             $_SESSION['status_code']="error";
- 
-	include "main.html";
+			include "main.html";
+	
 	
 } 
+include "script_log.php";
+
+		
 ?>
 
 		
-		<?php
-		include 'script_log.php';
-		?>
-
+		
 		
