@@ -52,7 +52,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white;padding:20px">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:yellow">
             Graphics & Design
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -200,7 +200,10 @@
   </div>
 </div>
 
-<!-- PHP for Page -->
+<!-- PHP for LogoDesign -->
+<h1 id="LogoDesign" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Logo Design</h1>
+
+
 
 <?php
 
@@ -208,27 +211,219 @@ $link=mysqli_connect('localhost','root','','jk');
 if(!$link){ 
     die('Failed to connect to server'); 
     } 
-$query="SELECT ProjectName,HirerName,ProjectDescription FROM `project` WHERE LogoDesign=1 OR Photoshop=1 or AddsDesign=1 or SocialMediaDesign=1";
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE LogoDesign=1";
 $results = mysqli_query($link,$query); 
 // $log=mysqli_fetch_assoc($results);
 while ($row = mysqli_fetch_assoc($results))
-{ 
-  echo'<center><img src="https://source.unsplash.com/400x100/?logo-design,photoshop,addsdesign"></center>';
-echo 
-'<center><h3>'.$row['ProjectName'].'</h3></center>';
-echo'<br>';
-echo 
-'<center><h3>'.$row['HirerName'].'</h3></center>';
-echo'<br>';
-echo 
-'<center><h3>'.$row['ProjectDescription'].'</h3></center>';
-echo'<br>';
+{
+	?>
+	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+	<h1 style="color:blue">
+	<?php
+	echo $row['ProjectName'];
+	?>
+	</h1>
+	</br>
+	<p>
+	<?php
+	echo $row['ProjectDescription'];
+?>
+</p>
+</br>
+<div class="row">
+<div class="col-md-6">
+By : 
+<?php
+	echo $row['HirerName'];
+?>
+</div>
+<div class="col-md-6" style="text-align:right">
+Contact at:
+<?php
+	echo $row['HirerId'];
+?>
+
+</div>
+</div>
+</br>
+</br>
+<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</div>
+</nav>
+</br>
+<?php
+}
+?>
+<!-- End of php -->
+<!-- PHP for Photoshop -->
+<h1 id="Photoshop" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Photoshop</h1>
+
+
+
+<?php
+
+$link=mysqli_connect('localhost','root','','jk');
+if(!$link){ 
+    die('Failed to connect to server'); 
+    } 
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Photoshop=1";
+$results = mysqli_query($link,$query); 
+// $log=mysqli_fetch_assoc($results);
+while ($row = mysqli_fetch_assoc($results))
+{
+	?>
+	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+	<h1 style="color:blue">
+	<?php
+	echo $row['ProjectName'];
+	?>
+	</h1>
+	</br>
+	<p>
+	<?php
+	echo $row['ProjectDescription'];
+?>
+</p>
+</br>
+<div class="row">
+<div class="col-md-6">
+By : 
+<?php
+	echo $row['HirerName'];
+?>
+</div>
+<div class="col-md-6" style="text-align:right">
+Contact at:
+<?php
+	echo $row['HirerId'];
+?>
+
+</div>
+</div>
+</br>
+</br>
+<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</div>
+</nav>
+</br>
+<?php
 }
 ?>
 
-
-
 <!-- End of php -->
+<!--php for Adds Design-->
+<h1 id="AddsDesign" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Adds Design</h1>
+
+
+
+<?php
+
+$link=mysqli_connect('localhost','root','','jk');
+if(!$link){ 
+    die('Failed to connect to server'); 
+    } 
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE AddsDesign=1";
+$results = mysqli_query($link,$query); 
+// $log=mysqli_fetch_assoc($results);
+while ($row = mysqli_fetch_assoc($results))
+{
+	?>
+	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+	<h1 style="color:blue">
+	<?php
+	echo $row['ProjectName'];
+	?>
+	</h1>
+	</br>
+	<p>
+	<?php
+	echo $row['ProjectDescription'];
+?>
+</p>
+</br>
+<div class="row">
+<div class="col-md-6">
+By : 
+<?php
+	echo $row['HirerName'];
+?>
+</div>
+<div class="col-md-6" style="text-align:right">
+Contact at:
+<?php
+	echo $row['HirerId'];
+?>
+
+</div>
+</div>
+</br>
+</br>
+<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</div>
+</nav>
+</br>
+<?php
+}
+?>
+<!-- End of php for AddsDesign-->
+<h1 id="SocialMediaDesign" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Social Media Design</h1>
+
+
+
+<?php
+
+$link=mysqli_connect('localhost','root','','jk');
+if(!$link){ 
+    die('Failed to connect to server'); 
+    } 
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE SocialMediaDesign=1";
+$results = mysqli_query($link,$query); 
+// $log=mysqli_fetch_assoc($results);
+while ($row = mysqli_fetch_assoc($results))
+{
+	?>
+	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+	<h1 style="color:blue">
+	<?php
+	echo $row['ProjectName'];
+	?>
+	</h1>
+	</br>
+	<p>
+	<?php
+	echo $row['ProjectDescription'];
+?>
+</p>
+</br>
+<div class="row">
+<div class="col-md-6">
+By : 
+<?php
+	echo $row['HirerName'];
+?>
+</div>
+<div class="col-md-6" style="text-align:right">
+Contact at:
+<?php
+	echo $row['HirerId'];
+?>
+
+</div>
+</div>
+</br>
+</br>
+<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</div>
+</nav>
+</br>
+<?php
+}
+?>
+<!--end of all php?>
 <!--footer-->
 
 <div style="background-color:rgb(22,30,44);padding-top:100px">
@@ -317,6 +512,9 @@ Copyright © 2021 registered Trademark of Job Karlo Technology International Pvt
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->
   </body>
+</html>
+
+
 </html>
 
 
