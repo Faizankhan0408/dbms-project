@@ -52,14 +52,14 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:yellow">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:rgb(255,242,0);">
             Graphics & Design
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#" style="">Logo Design</a></li>
-            <li><a class="dropdown-item" href="#" style="">Photoshop</a></li>
-            <li><a class="dropdown-item" href="#" style="">Adds Design</a></li>
-			<li><a class="dropdown-item" href="#" style="">Social Media Design</a></li>
+           <li><a class="dropdown-item"  href="#LogoDesign" style="">Logo Design</a></li>
+            <li><a class="dropdown-item" href="#Photoshop" style="">Photoshop</a></li>
+            <li><a class="dropdown-item" href="#AddsDesign" style="">Adds Design</a></li>
+			<li><a class="dropdown-item" href="#SocialMediaDesign" style="">Social Media Design</a></li>
           </ul>
         </li>
 		
@@ -199,7 +199,7 @@
     </div>
   </div>
 </div>
-
+<div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
 <!-- PHP for LogoDesign -->
 <h1 id="LogoDesign" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Logo Design</h1>
 
@@ -217,7 +217,7 @@ $results = mysqli_query($link,$query);
 while ($row = mysqli_fetch_assoc($results))
 {
 	?>
-	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+	
 <div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
 	<h1 style="color:blue">
 	<?php
@@ -239,10 +239,11 @@ By :
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
-Contact at:
-<?php
+Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 	echo $row['HirerId'];
-?>
+?>"> <?php
+	echo $row['HirerId'];
+?></a>
 
 </div>
 </div>
@@ -250,13 +251,14 @@ Contact at:
 </br>
 <button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
-</nav>
+<hr>
 </br>
 <?php
 }
 ?>
 <!-- End of php -->
 <!-- PHP for Photoshop -->
+
 <h1 id="Photoshop" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Photoshop</h1>
 
 
@@ -273,7 +275,7 @@ $results = mysqli_query($link,$query);
 while ($row = mysqli_fetch_assoc($results))
 {
 	?>
-	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+	
 <div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
 	<h1 style="color:blue">
 	<?php
@@ -295,10 +297,11 @@ By :
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
-Contact at:
-<?php
+Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 	echo $row['HirerId'];
-?>
+?>"> <?php
+	echo $row['HirerId'];
+?></a>
 
 </div>
 </div>
@@ -306,7 +309,7 @@ Contact at:
 </br>
 <button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
-</nav>
+<hr>
 </br>
 <?php
 }
@@ -330,7 +333,7 @@ $results = mysqli_query($link,$query);
 while ($row = mysqli_fetch_assoc($results))
 {
 	?>
-	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+	
 <div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
 	<h1 style="color:blue">
 	<?php
@@ -352,10 +355,11 @@ By :
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
-Contact at:
-<?php
+Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 	echo $row['HirerId'];
-?>
+?>"> <?php
+	echo $row['HirerId'];
+?></a>
 
 </div>
 </div>
@@ -363,7 +367,7 @@ Contact at:
 </br>
 <button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
-</nav>
+<hr>
 </br>
 <?php
 }
@@ -385,7 +389,7 @@ $results = mysqli_query($link,$query);
 while ($row = mysqli_fetch_assoc($results))
 {
 	?>
-	<nav aria-label="breadcrumb" class="container" style="background-color:rgb(239,239,239);">
+	
 <div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
 	<h1 style="color:blue">
 	<?php
@@ -407,10 +411,11 @@ By :
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
-Contact at:
-<?php
+Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 	echo $row['HirerId'];
-?>
+?>"> <?php
+	echo $row['HirerId'];
+?></a>
 
 </div>
 </div>
@@ -418,12 +423,14 @@ Contact at:
 </br>
 <button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
-</nav>
+<hr>
 </br>
 <?php
 }
 ?>
-<!--end of all php?>
+
+<!--end of all php?-->
+</div>
 <!--footer-->
 
 <div style="background-color:rgb(22,30,44);padding-top:100px">
@@ -512,9 +519,6 @@ Copyright © 2021 registered Trademark of Job Karlo Technology International Pvt
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->
   </body>
-</html>
-
-
 </html>
 
 
