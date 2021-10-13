@@ -20,7 +20,7 @@
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="JK-1.png" width=60 height=45 style=""/>
+    <img src="/JK-1.png" width=60 height=45 style=""/>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	</br>
@@ -56,10 +56,10 @@
             Graphics & Design
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <li><a class="dropdown-item"  href="#LogoDesign" style="">Logo Design</a></li>
-            <li><a class="dropdown-item" href="#Photoshop" style="">Photoshop</a></li>
-            <li><a class="dropdown-item" href="#AddsDesign" style="">Adds Design</a></li>
-			<li><a class="dropdown-item" href="#SocialMediaDesign" style="">Social Media Design</a></li>
+           <li><a class="dropdown-item" href="../graphics.php/#LogoDesign"  style="">Logo Design</a></li>
+            <li><a class="dropdown-item" href="../graphics.php/#Photoshop"  style="">Photoshop</a></li>
+            <li><a class="dropdown-item" href="../graphics.php/#AddsDesign" style="">Adds Design</a></li>
+			<li><a class="dropdown-item" href="../graphics.php/#SocialMediaDesign" style="">Social Media Design</a></li>
           </ul>
         </li>
 		
@@ -68,9 +68,9 @@
             Video & Animation
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Logo Animation</a></li>
-            <li><a class="dropdown-item" href="#">Video Editing</a></li>
-            <li><a class="dropdown-item" href="#">Animated GIF's</a></li>
+             <li><a class="dropdown-item" href="../video.php/#LogoAnimation">Logo Animation</a></li>
+            <li><a class="dropdown-item" href="../video.php/#VideoEditing">Video Editing</a></li>
+            <li><a class="dropdown-item" href="../video.php/#AnimatedGIF">Animated GIF's</a></li>
           </ul>
         </li>
 		<li class="nav-item dropdown">
@@ -78,8 +78,8 @@
             Writing & Translation
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Content Writing</a></li>
-            <li><a class="dropdown-item" href="#">Translation</a></li>
+            <li><a class="dropdown-item" href="../writing.php/#ContentWriting">Content Writing</a></li>
+            <li><a class="dropdown-item" href="../writing.php/#Translation">Translation</a></li>
            
           </ul>
         </li>
@@ -88,10 +88,10 @@
             Tech & Programming
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Web Development</a></li>
-            <li><a class="dropdown-item" href="#">Game Development</a></li>
-            <li><a class="dropdown-item" href="#">Wordpress</a></li>
-			<li><a class="dropdown-item" href="#">App Development</a></li>
+            <li><a class="dropdown-item" href="../tech.php/#WebDevelopment">Web Development</a></li>
+            <li><a class="dropdown-item" href="../tech.php/#GameDevelopment">Game Development</a></li>
+            <li><a class="dropdown-item" href="../tech.php/#WordPress">Wordpress</a></li>
+			<li><a class="dropdown-item" href="../tech.php/#AppDevelopment">App Development</a></li>
           </ul>
         </li>
 		<li class="nav-item dropdown">
@@ -99,8 +99,8 @@
             Music & Audio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Voice Over</a></li>
-            <li><a class="dropdown-item" href="#">Remix & Mashup</a></li>
+             <li><a class="dropdown-item" href="../music.php/#Voiceover">Voice Over</a></li>
+            <li><a class="dropdown-item" href="../music.php/#Remix_Mashup">Remix & Mashup</a></li>
             
           </ul>
         </li>
@@ -109,8 +109,8 @@
             Bussiness & Marketing
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Social Media Marketing</a></li>
-            <li><a class="dropdown-item" href="#">Sales & Marketing</a></li>
+            <li><a class="dropdown-item" href="../bussiness.php/#SocialMediaMarketing">Social Media Marketing</a></li>
+            <li><a class="dropdown-item" href="../bussiness.php/#Sales_Marketing">Sales & Marketing</a></li>
            
           </ul>
         </li>
@@ -131,7 +131,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="login.php" method ="post">
+        <form action="../login.php" method ="post">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
@@ -168,7 +168,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" >
-        <form action="signup.php" method="post">
+        <form action="../signup.php" method="post">
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Your Name</label>
             <input type="text" class="form-control" id="your_name" name="your_name">
@@ -199,7 +199,7 @@
     </div>
   </div>
 </div>
-<div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" tabindex="0">
 <!-- PHP for LogoDesign -->
 <h1 id="LogoDesign" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Logo Design</h1>
 
@@ -436,28 +436,28 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 <div style="background-color:rgb(22,30,44);padding-top:100px">
 <div class="row container" style="margin-left:50px">
 <div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
- <img src="JK-1.png" height ="50" width="67"  style=""/></br></br></br></br></br>
+ <img src="/JK-1.png" height ="50" width="67"  style=""/></br></br></br></br></br>
 </div>
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="font-size:30px;margin-bottom:25px;color:white">Categories</h1>
 <p>
-<a style="text-decoration:none;color:white" href="">Logo Design</a></br>
-<a style="text-decoration:none;color:white" href="">Photoshop</a></br>
-<a style="text-decoration:none;color:white" href="">Social Media Design</a></br>
-<a style="text-decoration:none;color:white" href="">Ads Design</a></br>
-<a style="text-decoration:none;color:white" href="">Video Editing</a></br>
-<a style="text-decoration:none;color:white" href="">Animated GIFs</a></br>
-<a style="text-decoration:none;color:white" href="">Logo Animation</a></br>
-<a style="text-decoration:none;color:white" href="">Content Writing</a></br>
-<a style="text-decoration:none;color:white" href="">Translation</a></br>
-<a style="text-decoration:none;color:white" href="">Game Development</a></br>
-<a style="text-decoration:none;color:white" href="">WordPress</a></br>
-<a style="text-decoration:none;color:white" href="">App Development</a></br>
-<a style="text-decoration:none;color:white" href="">Web Development</a></br>
-<a style="text-decoration:none;color:white" href="">Voiceover</a></br>
-<a style="text-decoration:none;color:white" href="">Remix & Mashup</a></br>
-<a style="text-decoration:none;color:white" href="">Social Media Management</a></br>
-<a style="text-decoration:none;color:white" href="">Sales & Marketing</a></br></br></br></br>
+<a style="text-decoration:none;color:white" href="../graphics.php/#LogoDesign"  >Logo Design</a></br>
+<a style="text-decoration:none;color:white" href="../graphics.php/#Photoshop"  >Photoshop</a></br>
+<a style="text-decoration:none;color:white" href="../graphics.php/#AddsDesign" >Social Media Design</a></br>
+<a style="text-decoration:none;color:white" href="../graphics.php/#SocialMediaDesign">Ads Design</a></br>
+<a style="text-decoration:none;color:white" href="../video.php/#LogoAnimation">Video Editing</a></br>
+<a style="text-decoration:none;color:white" href="../video.php/#VideoEditing"	>Animated GIFs</a></br>
+<a style="text-decoration:none;color:white" href="../video.php/#AnimatedGIF"	>Logo Animation</a></br>
+<a style="text-decoration:none;color:white" href="../writing.php/#ContentWriting"	>Content Writing</a></br>
+<a style="text-decoration:none;color:white" href="../writing.php/#Translation"	>Translation</a></br>
+<a style="text-decoration:none;color:white" href="../tech.php/#WebDevelopment"	>Game Development</a></br>
+<a style="text-decoration:none;color:white" href="../tech.php/#GameDevelopment"	>WordPress</a></br>
+<a style="text-decoration:none;color:white" href="../tech.php/#WordPress"			>App Development</a></br>
+<a style="text-decoration:none;color:white" href="../tech.php/#AppDevelopment"	>Web Development</a></br>
+<a style="text-decoration:none;color:white" href="../music.php/#Voiceover"	>Voiceover</a></br>
+<a style="text-decoration:none;color:white" href="../music.php/#Remix_Mashup"	>Remix & Mashup</a></br>
+<a style="text-decoration:none;color:white" href="../bussiness.php/#SocialMediaMarketing"	>Social Media Management</a></br>
+<a style="text-decoration:none;color:white" href="../bussiness.php/#Sales_Marketing"		>Sales & Marketing</a></br></br></br></br>
 </div>
 
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
