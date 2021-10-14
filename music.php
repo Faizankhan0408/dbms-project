@@ -37,7 +37,7 @@
         </li>
 		</ul>
     </div>
-	 <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+	 <a class="nav-link" href=="" data-bs-toggle="modal" data-bs-target="#loginModal" >Log In</a>
 	
 	
 	 <button class="navbar-brand btn btn-outline-success" style="border-radius:20px;" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
@@ -98,7 +98,7 @@
           </ul>
         </li>
 		<li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:rgb(255,242,0);">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white;padding:20px">
             Music & Audio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -108,7 +108,7 @@
           </ul>
         </li>
 		<li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white;padding:20px">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:rgb(255,242,0);">
             Bussiness & Marketing
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -203,8 +203,8 @@
   </div>
 </div>
 <div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" tabindex="0">
-<!-- PHP for Voiceover -->
-<h1 id="Voiceover" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Voiceover</h1>
+<!-- PHP for SocialMediaMarketing -->
+<h1 id="SocialMediaMarketing" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Social Media Marketing</h1>
 
 
 
@@ -214,7 +214,7 @@ $link=mysqli_connect('localhost','root','','jk');
 if(!$link){ 
     die('Failed to connect to server'); 
     } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Voiceover=1";
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE SocialMediaMarketing=1";
 $results = mysqli_query($link,$query); 
 // $log=mysqli_fetch_assoc($results);
 while ($row = mysqli_fetch_assoc($results))
@@ -260,9 +260,9 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 }
 ?>
 <!-- End of php -->
-<!-- PHP for Remix & mashup -->
+<!-- PHP for Sales & Marketing -->
 
-<h1 id="Remix_Mashup" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Remix & Mashup</h1>
+<h1 id="Sales_Marketing" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Sales & Marketing</h1>
 
 
 
@@ -272,7 +272,7 @@ $link=mysqli_connect('localhost','root','','jk');
 if(!$link){ 
     die('Failed to connect to server'); 
     } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Remix_Mashup=1";
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Sales_Marketing=1";
 $results = mysqli_query($link,$query); 
 // $log=mysqli_fetch_assoc($results);
 while ($row = mysqli_fetch_assoc($results))
