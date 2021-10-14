@@ -30,9 +30,12 @@
       </form>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" style="" href="../howitworks.html" >How it Works</a>
+          <a class="nav-link " aria-current="page" style="padding-right:200px" href="../howitworks.html" >How it Works</a>
         </li>
-		 
+		 <li class="nav-item">
+          <a class="nav-link fas fa-home" aria-current="page" style="font-size:30px;color:red" href="../main.html" ></a>
+        </li>
+		</ul>
     </div>
 	 <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
 	
