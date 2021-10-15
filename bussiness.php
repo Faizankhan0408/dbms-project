@@ -30,9 +30,12 @@
       </form>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" style="" href="../howitworks.html" >How it Works</a>
+          <a class="nav-link " aria-current="page" style="padding-right:200px" href="../howitworks.html" >How it Works</a>
         </li>
-		 
+		 <li class="nav-item">
+          <a class="nav-link fas fa-home" aria-current="page" style="font-size:30px;color:red" href="../main.html" ></a>
+        </li>
+		</ul>
     </div>
 	 <a class="nav-link" href=="" data-bs-toggle="modal" data-bs-target="#loginModal" >Log In</a>
 	
@@ -200,6 +203,36 @@
   </div>
 </div>
 <div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" tabindex="0">
+<!--Bidding Modal-->
+<div class="modal" tabindex="-1" id ="BidModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bid</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+	  <form action="../bid.php" method="post">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Bidding Amount</label>
+            <input type="number" class="form-control" id="Amount" name="Amount" value="0">
+          </div>
+		  <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Final Date</label>
+            <input type="date" class="form-control" id="Date" name="Date" value="01-03-2023">
+          </div>
+		  <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Why shall u be hired?</label>
+            <input type="text" class="form-control" style="padding-bottom:100px" id="BidData" name="BidData" value="I will do this project in $200" >
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit " value="submit"   class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+      </div>
+	  </form>
+    </div>
+  </div>
+</div>
 <!-- PHP for SocialMediaMarketing -->
 <h1 id="SocialMediaMarketing" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Social Media Marketing</h1>
 
@@ -236,6 +269,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -249,7 +286,7 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
 <hr>
 </br>
@@ -294,6 +331,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -307,7 +348,7 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
 <hr>
 </br>
