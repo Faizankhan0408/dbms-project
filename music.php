@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -37,7 +40,7 @@
         </li>
 		</ul>
     </div>
-	 <a class="nav-link" href=="" data-bs-toggle="modal" data-bs-target="#loginModal" >Log In</a>
+	 <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
 	
 	
 	 <button class="navbar-brand btn btn-outline-success" style="border-radius:20px;" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
@@ -98,7 +101,7 @@
           </ul>
         </li>
 		<li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white;padding:20px">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:rgb(255,242,0);">
             Music & Audio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -108,7 +111,7 @@
           </ul>
         </li>
 		<li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:rgb(255,242,0);">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white;padding:20px">
             Bussiness & Marketing
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -203,8 +206,38 @@
   </div>
 </div>
 <div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" tabindex="0">
-<!-- PHP for SocialMediaMarketing -->
-<h1 id="SocialMediaMarketing" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Social Media Marketing</h1>
+<!--Bidding Modal-->
+<div class="modal" tabindex="-1" id ="BidModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bid</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+	  <form action="../bid.php" method="post">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Bidding Amount</label>
+            <input type="number" class="form-control" id="Amount" name="Amount" value="0">
+          </div>
+		  <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Final Date</label>
+            <input type="date" class="form-control" id="Date" name="Date" value="01-03-2023">
+          </div>
+		  <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Why shall u be hired?</label>
+            <input type="text" class="form-control" style="padding-bottom:100px" id="BidData" name="BidData" value="I will do this project in $200" >
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit " value="submit"   class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+      </div>
+	  </form>
+    </div>
+  </div>
+</div>
+<!-- PHP for Voiceover -->
+<h1 id="Voiceover" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Voiceover</h1>
 
 
 
@@ -214,7 +247,7 @@ $link=mysqli_connect('localhost','root','','jk');
 if(!$link){ 
     die('Failed to connect to server'); 
     } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE SocialMediaMarketing=1";
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Voiceover=1";
 $results = mysqli_query($link,$query); 
 // $log=mysqli_fetch_assoc($results);
 while ($row = mysqli_fetch_assoc($results))
@@ -239,6 +272,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -252,7 +289,7 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
 <hr>
 </br>
@@ -260,9 +297,9 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 }
 ?>
 <!-- End of php -->
-<!-- PHP for Sales & Marketing -->
+<!-- PHP for Remix & mashup -->
 
-<h1 id="Sales_Marketing" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Sales & Marketing</h1>
+<h1 id="Remix_Mashup" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Remix & Mashup</h1>
 
 
 
@@ -272,7 +309,7 @@ $link=mysqli_connect('localhost','root','','jk');
 if(!$link){ 
     die('Failed to connect to server'); 
     } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Sales_Marketing=1";
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Remix_Mashup=1";
 $results = mysqli_query($link,$query); 
 // $log=mysqli_fetch_assoc($results);
 while ($row = mysqli_fetch_assoc($results))
@@ -297,6 +334,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -310,7 +351,7 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
 <hr>
 </br>
