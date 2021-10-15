@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -215,15 +218,15 @@
 	  <form action="../bid.php" method="post">
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Bidding Amount</label>
-            <input type="number" class="form-control" id="Amount" name="Amount">
+            <input type="number" class="form-control" id="Amount" name="Amount" value="0">
           </div>
 		  <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Final Date</label>
-            <input type="date" class="form-control" id="Date" name="Date">
+            <input type="date" class="form-control" id="Date" name="Date" value="01-03-2023">
           </div>
 		  <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Why shall u be hired?</label>
-            <input type="text" class="form-control" style="padding-bottom:100px" id="BidData" name="BidData">
+            <input type="text" class="form-control" style="padding-bottom:100px" id="BidData" name="BidData" value="I will do this project in $200" >
           </div>
       </div>
       <div class="modal-footer">
@@ -269,6 +272,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -327,6 +334,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -340,7 +351,7 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
 <hr>
 </br>
@@ -366,7 +377,6 @@ $results = mysqli_query($link,$query);
 while ($row = mysqli_fetch_assoc($results))
 {
 	?>
-	
 <div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
 	<h1 style="color:blue">
 	<?php
@@ -385,6 +395,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -398,7 +412,7 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
 <hr>
 </br>
@@ -422,7 +436,6 @@ $results = mysqli_query($link,$query);
 while ($row = mysqli_fetch_assoc($results))
 {
 	?>
-	
 <div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
 	<h1 style="color:blue">
 	<?php
@@ -441,6 +454,10 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
+	$_SESSION['HIRER_ID']=$row['HirerId'];
+	
+	$_SESSION['HirerName']=$row['HirerName'];
+	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
 </div>
 <div class="col-md-6" style="text-align:right">
@@ -451,6 +468,10 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 ?></a>
 
 </div>
+</div>
+</br>
+</br>
+<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
 </div>
 </br>
 </br>
