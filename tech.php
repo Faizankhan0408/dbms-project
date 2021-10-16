@@ -206,36 +206,7 @@ session_start();
   </div>
 </div>
 <div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" tabindex="0">
-<!--Bidding Modal-->
-<div class="modal" tabindex="-1" id ="BidModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Bid</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-	  <form action="../bid.php" method="post">
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Bidding Amount</label>
-            <input type="number" class="form-control" id="Amount" name="Amount" value="0">
-          </div>
-		  <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Final Date</label>
-            <input type="date" class="form-control" id="Date" name="Date" value="01-03-2023">
-          </div>
-		  <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Why shall u be hired?</label>
-            <input type="text" class="form-control" style="padding-bottom:100px" id="BidData" name="BidData" value="I will do this project in $200" >
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button type="submit " value="submit"   class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
-      </div>
-	  </form>
-    </div>
-  </div>
-</div>
+
 <!-- PHP for Web Devolopment -->
 <h1 id="WebDevelopment" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Web Development</h1>
 
@@ -254,7 +225,7 @@ while ($row = mysqli_fetch_assoc($results))
 {
 	?>
 	
-<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
 	<h1 style="color:blue">
 	<?php
 	echo $row['ProjectName'];
@@ -272,8 +243,8 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
-	$_SESSION['HIRER_ID']=$row['HirerId'];
 	
+	$_SESSION['HIRER_ID']=$row['HirerId'];
 	$_SESSION['HirerName']=$row['HirerName'];
 	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
@@ -289,11 +260,95 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<form method="post">
+<button type="submit " name="bid<?php echo $row['ProjectId']; ?>" href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</form>
+</br>
+<?php
+if(isset($_POST["bid".$row['ProjectId']]))
+	goto chance;
+if(isset($_SESSION['USER_EMAIL']) && $_SESSION['USER_EMAIL']==$row['HirerId'])
+{
+?><center>
+	<button class="" style="background-color:white;color:blue;text-decoration:underline;border-color:white;padding:10px;margin-bottom:100px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    View Bids
+  </button>
+  </center>
+  <div class="collapse " id="collapseExample">
+    <?php
+    $qry="SELECT * from bidding WHERE ProjectId='".$_SESSION['ProjectId']."'";
+$result = mysqli_query($link,$qry);
+while ($col = mysqli_fetch_assoc($result))
+{
+	?><hr>
+	<div class="container" style="margin-bottom:100px">
+	<h1 style="color:red">
+	<?php
+	echo $col['BidderName'];
+	?>
+	</h1>
+	</br>
+	</br>
+	<p>
+	
+	<?php
+	echo $col['BidData'];
+	?>
+	</p>
+	</br>
+	<div style="text-align:right">
+	Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
+	echo $col['BidderId'];
+?>">
+
+<?php
+	echo $col['BidderId'];
+?>
+</a>
+</div>
+</br>
+<?php
+$_SESSION['BiddingId']=$col['BiddingId'];
+if($col['HireStatus'])
+{?>
+<center>
+<div  style="font-size:30px;padding:10px;max-width:300px;background-color:rgb(255,193,7);color:white;">
+ Bidder Hired
+
+</div>
+</center>
+	<?php
+}
+else
+{
+
+	?><form action="../hire.php" method="post">
+	<input type="number" hidden name="BiddingId" value="<?php echo $col['BiddingId'] ?>">
+<button type="submit" class="btn btn-danger" name="hire" style="font-size:20px;padding-left:20px;padding-right:20px">
+Hire
+</button>
+</form>
+</div>
+
+<?php
+
+}
+	?>
+	
+	<?php
+	
+}
+  ?>
+  </div>
+  </div>
+    <?php
+}
+?>
 </div>
 <hr>
 </br>
 <?php
+
 }
 ?>
 <!-- End of php -->
@@ -316,7 +371,7 @@ while ($row = mysqli_fetch_assoc($results))
 {
 	?>
 	
-<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
 	<h1 style="color:blue">
 	<?php
 	echo $row['ProjectName'];
@@ -334,8 +389,8 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
-	$_SESSION['HIRER_ID']=$row['HirerId'];
 	
+	$_SESSION['HIRER_ID']=$row['HirerId'];
 	$_SESSION['HirerName']=$row['HirerName'];
 	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
@@ -351,14 +406,97 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<form method="post">
+<button type="submit " name="bid<?php echo $row['ProjectId']; ?>" href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</form>
+</br>
+<?php
+if(isset($_POST["bid".$row['ProjectId']]))
+	goto chance;
+if(isset($_SESSION['USER_EMAIL']) && $_SESSION['USER_EMAIL']==$row['HirerId'])
+{
+?><center>
+	<button class="" style="background-color:white;color:blue;text-decoration:underline;border-color:white;padding:10px;margin-bottom:100px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    View Bids
+  </button>
+  </center>
+  <div class="collapse " id="collapseExample">
+    <?php
+    $qry="SELECT * from bidding WHERE ProjectId='".$_SESSION['ProjectId']."'";
+$result = mysqli_query($link,$qry);
+while ($col = mysqli_fetch_assoc($result))
+{
+	?><hr>
+	<div class="container" style="margin-bottom:100px">
+	<h1 style="color:red">
+	<?php
+	echo $col['BidderName'];
+	?>
+	</h1>
+	</br>
+	</br>
+	<p>
+	
+	<?php
+	echo $col['BidData'];
+	?>
+	</p>
+	</br>
+	<div style="text-align:right">
+	Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
+	echo $col['BidderId'];
+?>">
+
+<?php
+	echo $col['BidderId'];
+?>
+</a>
+</div>
+</br>
+<?php
+$_SESSION['BiddingId']=$col['BiddingId'];
+if($col['HireStatus'])
+{?>
+<center>
+<div  style="font-size:30px;padding:10px;max-width:300px;background-color:rgb(255,193,7);color:white;">
+ Bidder Hired
+
+</div>
+</center>
+	<?php
+}
+else
+{
+
+	?><form action="../hire.php" method="post">
+	<input type="number" hidden name="BiddingId" value="<?php echo $col['BiddingId'] ?>">
+<button type="submit" class="btn btn-danger" name="hire" style="font-size:20px;padding-left:20px;padding-right:20px">
+Hire
+</button>
+</form>
+</div>
+
+<?php
+
+}
+	?>
+	
+	<?php
+	
+}
+  ?>
+  </div>
+  </div>
+    <?php
+}
+?>
 </div>
 <hr>
 </br>
 <?php
+
 }
 ?>
-
 <!-- End of php -->
 <!--php for Wordpress-->
 <h1 id="Wordpress" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Wordpress</h1>
@@ -378,7 +516,7 @@ while ($row = mysqli_fetch_assoc($results))
 {
 	?>
 	
-<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
 	<h1 style="color:blue">
 	<?php
 	echo $row['ProjectName'];
@@ -396,8 +534,8 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
-	$_SESSION['HIRER_ID']=$row['HirerId'];
 	
+	$_SESSION['HIRER_ID']=$row['HirerId'];
 	$_SESSION['HirerName']=$row['HirerName'];
 	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
@@ -413,11 +551,95 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<form method="post">
+<button type="submit " name="bid<?php echo $row['ProjectId']; ?>" href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</form>
+</br>
+<?php
+if(isset($_POST["bid".$row['ProjectId']]))
+	goto chance;
+if(isset($_SESSION['USER_EMAIL']) && $_SESSION['USER_EMAIL']==$row['HirerId'])
+{
+?><center>
+	<button class="" style="background-color:white;color:blue;text-decoration:underline;border-color:white;padding:10px;margin-bottom:100px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    View Bids
+  </button>
+  </center>
+  <div class="collapse " id="collapseExample">
+    <?php
+    $qry="SELECT * from bidding WHERE ProjectId='".$_SESSION['ProjectId']."'";
+$result = mysqli_query($link,$qry);
+while ($col = mysqli_fetch_assoc($result))
+{
+	?><hr>
+	<div class="container" style="margin-bottom:100px">
+	<h1 style="color:red">
+	<?php
+	echo $col['BidderName'];
+	?>
+	</h1>
+	</br>
+	</br>
+	<p>
+	
+	<?php
+	echo $col['BidData'];
+	?>
+	</p>
+	</br>
+	<div style="text-align:right">
+	Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
+	echo $col['BidderId'];
+?>">
+
+<?php
+	echo $col['BidderId'];
+?>
+</a>
+</div>
+</br>
+<?php
+$_SESSION['BiddingId']=$col['BiddingId'];
+if($col['HireStatus'])
+{?>
+<center>
+<div  style="font-size:30px;padding:10px;max-width:300px;background-color:rgb(255,193,7);color:white;">
+ Bidder Hired
+
+</div>
+</center>
+	<?php
+}
+else
+{
+
+	?><form action="../hire.php" method="post">
+	<input type="number" hidden name="BiddingId" value="<?php echo $col['BiddingId'] ?>">
+<button type="submit" class="btn btn-danger" name="hire" style="font-size:20px;padding-left:20px;padding-right:20px">
+Hire
+</button>
+</form>
+</div>
+
+<?php
+
+}
+	?>
+	
+	<?php
+	
+}
+  ?>
+  </div>
+  </div>
+    <?php
+}
+?>
 </div>
 <hr>
 </br>
 <?php
+
 }
 ?>
 <!--  php for AppDevelopment-->
@@ -438,7 +660,7 @@ while ($row = mysqli_fetch_assoc($results))
 {
 	?>
 	
-<div class="container" style="padding:50px;padding-left:50px;padding-right:50px"  >
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
 	<h1 style="color:blue">
 	<?php
 	echo $row['ProjectName'];
@@ -456,8 +678,8 @@ while ($row = mysqli_fetch_assoc($results))
 By : 
 <?php
 	echo $row['HirerName'];
-	$_SESSION['HIRER_ID']=$row['HirerId'];
 	
+	$_SESSION['HIRER_ID']=$row['HirerId'];
 	$_SESSION['HirerName']=$row['HirerName'];
 	$_SESSION['ProjectId']=$row['ProjectId'];
 ?>
@@ -473,14 +695,97 @@ Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
 </div>
 </br>
 </br>
-<button type="button " href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+<form method="post">
+<button type="submit " name="bid<?php echo $row['ProjectId']; ?>" href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
+</form>
+</br>
+<?php
+if(isset($_POST["bid".$row['ProjectId']]))
+	goto chance;
+if(isset($_SESSION['USER_EMAIL']) && $_SESSION['USER_EMAIL']==$row['HirerId'])
+{
+?><center>
+	<button class="" style="background-color:white;color:blue;text-decoration:underline;border-color:white;padding:10px;margin-bottom:100px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    View Bids
+  </button>
+  </center>
+  <div class="collapse " id="collapseExample">
+    <?php
+    $qry="SELECT * from bidding WHERE ProjectId='".$_SESSION['ProjectId']."'";
+$result = mysqli_query($link,$qry);
+while ($col = mysqli_fetch_assoc($result))
+{
+	?><hr>
+	<div class="container" style="margin-bottom:100px">
+	<h1 style="color:red">
+	<?php
+	echo $col['BidderName'];
+	?>
+	</h1>
+	</br>
+	</br>
+	<p>
+	
+	<?php
+	echo $col['BidData'];
+	?>
+	</p>
+	</br>
+	<div style="text-align:right">
+	Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
+	echo $col['BidderId'];
+?>">
+
+<?php
+	echo $col['BidderId'];
+?>
+</a>
+</div>
+</br>
+<?php
+$_SESSION['BiddingId']=$col['BiddingId'];
+if($col['HireStatus'])
+{?>
+<center>
+<div  style="font-size:30px;padding:10px;max-width:300px;background-color:rgb(255,193,7);color:white;">
+ Bidder Hired
+
+</div>
+</center>
+	<?php
+}
+else
+{
+
+	?><form action="../hire.php" method="post">
+	<input type="number" hidden name="BiddingId" value="<?php echo $col['BiddingId'] ?>">
+<button type="submit" class="btn btn-danger" name="hire" style="font-size:20px;padding-left:20px;padding-right:20px">
+Hire
+</button>
+</form>
+</div>
+
+<?php
+
+}
+	?>
+	
+	<?php
+	
+}
+  ?>
+  </div>
+  </div>
+    <?php
+}
+?>
 </div>
 <hr>
 </br>
 <?php
+
 }
 ?>
-
 <!--end of all php?-->
 </div>
 <!--footer-->
@@ -557,7 +862,63 @@ Copyright © 2021 registered Trademark of Job Karlo Technology International Pvt
 </div>
 </div>
 </div>
+<?php 
+goto name;
+chance:
 
+?>
+<button type="button " hidden id="BID" name="BID" href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style=""></button>
+<div class="modal" tabindex="-1" id ="BidModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bid</h5>
+        
+      </div>
+      <div class="modal-body">
+	  <form action="../bid.php" method="post">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Bidding Amount</label>
+            <input type="number" class="form-control" id="Amount" name="Amount" value="0">
+          </div>
+		  <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Final Date</label>
+            <input type="date" class="form-control" id="Date" name="Date" value="01-03-2023">
+          </div>
+		  <div class="mb-3">
+            
+            <input type="int" class="form-control" hidden id="ProjectId" name="ProjectId" name="ProjectId" value="<?php echo $_SESSION['ProjectId'];?>">
+          </div>
+		  
+		  <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Why shall u be hired?
+			</label>
+            <input type="text" class="form-control" style="padding-bottom:100px" id="BidData" name="BidData" value="I will do this project in $200" >
+          </div>
+      </div>
+      <div class="modal-footer">
+	  
+	  <button type="submit " value="submit"   name="close" class="btn btn-danger" style="padding:10px;padding-left:30px;padding-right:30px;float:left;margin-right:150px;">Close</button>
+	
+        <button type="submit " value="submit"  name="bid" class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;margin-right:50px">$ Bid</button>
+      </div>
+	  </form>
+    </div>
+  </div>
+  
+</div>
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded',()=>{document.getElementById('BID');
+BID.click()=true;})
+document.getElementById('BID').click();
+
+
+</script>
+<?php
+
+name:
+?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
