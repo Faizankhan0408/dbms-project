@@ -7,18 +7,14 @@ $query="Select link from search where ";
 if(!$linked){ 
   die('Failed to connect to server'); 
   }
-$i=0;
-foreach($terms as $each){
-    $i++;
-    if($i==1) 
-    $query.="keyword like '$each%' ";
-    else
-    $query.="OR keyword like '$each%' ";
-}
+$query="SELECT * FROM search WHERE keyword LIKE '%$name%'";
+    
+
 $results = mysqli_query($linked,$query); 
 while ($row = mysqli_fetch_assoc($results))
-{
-  include $row['link'];
+{$col=$row['link'];
+  header("Location:$col");
+  break;
 }
 ?>
 
