@@ -1,21 +1,4 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="frontpage.css">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/bb6de713fe.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-  <title>Job Karlo</title>
-
-</head>
-
-<body>
 
   <!doctype html>
 <html lang="en">
@@ -42,16 +25,16 @@
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	</br>
-	<form class="d-flex">
-        <input class="form-control me-2" type="search" style="" placeholder="Search" aria-label="Search">
+	<form class="d-flex" action="search_engine.php" method="post">
+        <input class="form-control me-2" type="search" style="" placeholder="Search" aria-label="Search" id="search" name="search">
         <button class="btn btn-outline-success" type="submit" style="">Search</button>
       </form>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" style="padding-right:200px" href="howitworks.html" >How it Works</a>
+          <a class="nav-link " aria-current="page" style="padding-right:200px" href="howitworks.php" >How it Works</a>
         </li>
 		<li class="nav-item">
-          <a class="nav-link fas fa-home" aria-current="page" style="font-size:30px;color:red" href="main.html" ></a>
+          <a class="nav-link fas fa-home" aria-current="page" style="font-size:30px;color:red" href="main.php" ></a>
         </li>
 		</ul> 
     </div>
@@ -414,10 +397,12 @@
   </div>
 <!--footer-->
 
+<!--footer-->
+
 <div style="background-color:rgb(22,30,44);padding-top:100px">
 <div class="row container" style="margin-left:50px">
 <div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
- <img src="JK-1.png" height="50" width="100"  style=""/></br></br></br></br></br>
+ <img src="JK-1.png" height ="50" width="67"  style=""/></br></br></br></br></br>
 </div>
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="font-size:30px;margin-bottom:25px;color:white">Categories</h1>
@@ -443,7 +428,7 @@
 
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="font-size:30px;margin-bottom:25px;color:white">About</h1>
-<a style="text-decoration:none;color:white" href="">About Us</a></br>
+<a style="text-decoration:none;color:white" href="About.php">About Us</a></br>
 <a style="text-decoration:none;color:white" href="">Leadership</a></br></br></br></br>
 </div>
 
@@ -464,14 +449,30 @@
 <hr style="color:white">
 <div class="row container">
 <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="color:white;font-size:30px">24,321
+<h1 style="color:white;font-size:30px;padding-left:50px;"><?php
+$link = mysqli_connect('localhost', 'root', '', 'jk');
+ if(!$link){ 
+die('Failed to connect to server'); 
+} 
+$query="SELECT count(*) as total from users";
+$results = mysqli_query($link,$query); 
+$log=mysqli_fetch_assoc($results);
+echo $log['total'];?>
 </h1>
 <p style="color:white">
 Registered Users
 </p>
 </div>
 <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="color:white;font-size:30px">3,245
+<h1 style="color:white;font-size:30px;padding-left:40px;"><?php
+$link = mysqli_connect('localhost', 'root', '', 'jk');
+ if(!$link){ 
+die('Failed to connect to server'); 
+} 
+$query="SELECT count(*) as total from project";
+$results = mysqli_query($link,$query); 
+$log=mysqli_fetch_assoc($results);
+echo $log['total'];?>
 </h1>
 <p style="color:white">
 Total Jobs Posted
