@@ -317,6 +317,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -328,18 +329,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }
@@ -463,6 +464,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -474,18 +476,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }

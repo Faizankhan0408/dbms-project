@@ -27,16 +27,16 @@ session_start();
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	</br>
-	<form class="d-flex">
-        <input class="form-control me-2" type="search" style="" placeholder="Search" aria-label="Search">
+	<form class="d-flex" action="../search_engine.php" method="post">
+        <input class="form-control me-2" type="search" style="" placeholder="Search" aria-label="Search" id="search" name="search">
         <button class="btn btn-outline-success" type="submit" style="">Search</button>
       </form>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" style="padding-right:200px" href="../howitworks.html" >How it Works</a>
+          <a class="nav-link " aria-current="page" style="padding-right:200px" href="../howitworks.php" >How it Works</a>
         </li>
 		 <li class="nav-item">
-          <a class="nav-link fas fa-home" aria-current="page" style="font-size:30px;color:red" href="../main.html" ></a>
+          <a class="nav-link fas fa-home" aria-current="page" style="font-size:30px;color:red" href="../main.php" ></a>
         </li>
 		</ul>
     </div>
@@ -80,7 +80,7 @@ session_start();
           </ul>
         </li>
 		<li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white;padding:20px">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:rgb(255,242,0);">
             Writing & Translation
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -90,7 +90,7 @@ session_start();
           </ul>
         </li>
 		<li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:red;padding:20px;background-color:rgb(255,242,0);">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white;padding:20px">
             Tech & Programming
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -105,7 +105,7 @@ session_start();
             Music & Audio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../music.php/#Voiceover">Voice Over</a></li>
+             <li><a class="dropdown-item" href="../music.php/#Voiceover">Voice Over</a></li>
             <li><a class="dropdown-item" href="../music.php/#Remix_Mashup">Remix & Mashup</a></li>
             
           </ul>
@@ -207,8 +207,8 @@ session_start();
 </div>
 <div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" tabindex="0">
 
-<!-- PHP for Web Devolopment -->
-<h1 id="WebDevelopment" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Web Development</h1>
+<!-- PHP for Content Writing -->
+<h1 id="ContentWriting" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Content Writing</h1>
 
 
 
@@ -218,7 +218,7 @@ $link=mysqli_connect('localhost','root','','jk');
 if(!$link){ 
     die('Failed to connect to server'); 
     } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE WebDevelopment=1";
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE ContentWriting=1";
 $results = mysqli_query($link,$query); 
 // $log=mysqli_fetch_assoc($results);
 while ($row = mysqli_fetch_assoc($results))
@@ -317,6 +317,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -328,18 +329,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }
@@ -352,9 +353,9 @@ Hire
 }
 ?>
 <!-- End of php -->
-<!-- PHP for Game Developmenr -->
+<!-- PHP for Translation -->
 
-<h1 id="GameDevelopment" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Game Development</h1>
+<h1 id="Translation" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Translation</h1>
 
 
 
@@ -364,7 +365,7 @@ $link=mysqli_connect('localhost','root','','jk');
 if(!$link){ 
     die('Failed to connect to server'); 
     } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE GameDevelopment=1";
+$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Translation=1";
 $results = mysqli_query($link,$query); 
 // $log=mysqli_fetch_assoc($results);
 while ($row = mysqli_fetch_assoc($results))
@@ -463,6 +464,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -474,18 +476,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }
@@ -497,295 +499,7 @@ Hire
 
 }
 ?>
-<!-- End of php -->
-<!--php for Wordpress-->
-<h1 id="Wordpress" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Wordpress</h1>
 
-
-
-<?php
-
-$link=mysqli_connect('localhost','root','','jk');
-if(!$link){ 
-    die('Failed to connect to server'); 
-    } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE Wordpress=1";
-$results = mysqli_query($link,$query); 
-// $log=mysqli_fetch_assoc($results);
-while ($row = mysqli_fetch_assoc($results))
-{
-	?>
-	
-<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
-	<h1 style="color:blue">
-	<?php
-	echo $row['ProjectName'];
-	?>
-	</h1>
-	</br>
-	<p>
-	<?php
-	echo $row['ProjectDescription'];
-?>
-</p>
-</br>
-<div class="row">
-<div class="col-md-6">
-By : 
-<?php
-	echo $row['HirerName'];
-	
-	$_SESSION['HIRER_ID']=$row['HirerId'];
-	$_SESSION['HirerName']=$row['HirerName'];
-	$_SESSION['ProjectId']=$row['ProjectId'];
-?>
-</div>
-<div class="col-md-6" style="text-align:right">
-Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
-	echo $row['HirerId'];
-?>"> <?php
-	echo $row['HirerId'];
-?></a>
-
-</div>
-</div>
-</br>
-</br>
-<form method="post">
-<button type="submit " name="bid<?php echo $row['ProjectId']; ?>" href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
-</form>
-</br>
-<?php
-if(isset($_POST["bid".$row['ProjectId']]))
-	goto chance;
-if(isset($_SESSION['USER_EMAIL']) && $_SESSION['USER_EMAIL']==$row['HirerId'])
-{
-?><center>
-	<button class="" style="background-color:white;color:blue;text-decoration:underline;border-color:white;padding:10px;margin-bottom:100px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    View Bids
-  </button>
-  </center>
-  <div class="collapse " id="collapseExample">
-    <?php
-    $qry="SELECT * from bidding WHERE ProjectId='".$_SESSION['ProjectId']."'";
-$result = mysqli_query($link,$qry);
-while ($col = mysqli_fetch_assoc($result))
-{
-	?><hr>
-	<div class="container" style="margin-bottom:100px">
-	<h1 style="color:red">
-	<?php
-	echo $col['BidderName'];
-	?>
-	</h1>
-	</br>
-	</br>
-	<p>
-	
-	<?php
-	echo $col['BidData'];
-	?>
-	</p>
-	</br>
-	<div style="text-align:right">
-	Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
-	echo $col['BidderId'];
-?>">
-
-<?php
-	echo $col['BidderId'];
-?>
-</a>
-</div>
-</br>
-<?php
-$_SESSION['BiddingId']=$col['BiddingId'];
-if($col['HireStatus'])
-{?>
-<center>
-<div  style="font-size:30px;padding:10px;max-width:300px;background-color:rgb(255,193,7);color:white;">
- Bidder Hired
-
-</div>
-</center>
-	<?php
-}
-else
-{
-
-	?><form action="../hire.php" method="post">
-	<input type="number" hidden name="BiddingId" value="<?php echo $col['BiddingId'] ?>">
-<button type="submit" class="btn btn-danger" name="hire" style="font-size:20px;padding-left:20px;padding-right:20px">
-Hire
-</button>
-</form>
-</div>
-
-<?php
-
-}
-	?>
-	
-	<?php
-	
-}
-  ?>
-  </div>
-  </div>
-    <?php
-}
-?>
-</div>
-<hr>
-</br>
-<?php
-
-}
-?>
-<!--  php for AppDevelopment-->
-<h1 id="AppDevelopment" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">App Developmenr</h1>
-
-
-
-<?php
-
-$link=mysqli_connect('localhost','root','','jk');
-if(!$link){ 
-    die('Failed to connect to server'); 
-    } 
-$query="SELECT ProjectName,ProjectId,ProjectDescription,HirerName,HirerId from project WHERE AppDevelopment=1";
-$results = mysqli_query($link,$query); 
-// $log=mysqli_fetch_assoc($results);
-while ($row = mysqli_fetch_assoc($results))
-{
-	?>
-	
-<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
-	<h1 style="color:blue">
-	<?php
-	echo $row['ProjectName'];
-	?>
-	</h1>
-	</br>
-	<p>
-	<?php
-	echo $row['ProjectDescription'];
-?>
-</p>
-</br>
-<div class="row">
-<div class="col-md-6">
-By : 
-<?php
-	echo $row['HirerName'];
-	
-	$_SESSION['HIRER_ID']=$row['HirerId'];
-	$_SESSION['HirerName']=$row['HirerName'];
-	$_SESSION['ProjectId']=$row['ProjectId'];
-?>
-</div>
-<div class="col-md-6" style="text-align:right">
-Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
-	echo $row['HirerId'];
-?>"> <?php
-	echo $row['HirerId'];
-?></a>
-
-</div>
-</div>
-</br>
-</br>
-<form method="post">
-<button type="submit " name="bid<?php echo $row['ProjectId']; ?>" href="#"  class="btn btn-success" style="padding:10px;padding-left:30px;padding-right:30px;">$ Bid</button>
-</form>
-</br>
-<?php
-if(isset($_POST["bid".$row['ProjectId']]))
-	goto chance;
-if(isset($_SESSION['USER_EMAIL']) && $_SESSION['USER_EMAIL']==$row['HirerId'])
-{
-?><center>
-	<button class="" style="background-color:white;color:blue;text-decoration:underline;border-color:white;padding:10px;margin-bottom:100px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    View Bids
-  </button>
-  </center>
-  <div class="collapse " id="collapseExample">
-    <?php
-    $qry="SELECT * from bidding WHERE ProjectId='".$_SESSION['ProjectId']."'";
-$result = mysqli_query($link,$qry);
-while ($col = mysqli_fetch_assoc($result))
-{
-	?><hr>
-	<div class="container" style="margin-bottom:100px">
-	<h1 style="color:red">
-	<?php
-	echo $col['BidderName'];
-	?>
-	</h1>
-	</br>
-	</br>
-	<p>
-	
-	<?php
-	echo $col['BidData'];
-	?>
-	</p>
-	</br>
-	<div style="text-align:right">
-	Contact at:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php
-	echo $col['BidderId'];
-?>">
-
-<?php
-	echo $col['BidderId'];
-?>
-</a>
-</div>
-</br>
-<?php
-$_SESSION['BiddingId']=$col['BiddingId'];
-if($col['HireStatus'])
-{?>
-<center>
-<div  style="font-size:30px;padding:10px;max-width:300px;background-color:rgb(255,193,7);color:white;">
- Bidder Hired
-
-</div>
-</center>
-	<?php
-}
-else
-{
-
-	?><form action="../hire.php" method="post">
-	<input type="number" hidden name="BiddingId" value="<?php echo $col['BiddingId'] ?>">
-<button type="submit" class="btn btn-danger" name="hire" style="font-size:20px;padding-left:20px;padding-right:20px">
-Hire
-</button>
-</form>
-</div>
-
-<?php
-
-}
-	?>
-	
-	<?php
-	
-}
-  ?>
-  </div>
-  </div>
-    <?php
-}
-?>
-</div>
-<hr>
-</br>
-<?php
-
-}
-?>
 <!--end of all php?-->
 </div>
 <!--footer-->
@@ -819,7 +533,7 @@ Hire
 
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="font-size:30px;margin-bottom:25px;color:white">About</h1>
-<a style="text-decoration:none;color:white" href="">About Us</a></br>
+<a style="text-decoration:none;color:white" href="../About.php">About Us</a></br>
 <a style="text-decoration:none;color:white" href="">Leadership</a></br></br></br></br>
 </div>
 
@@ -840,14 +554,30 @@ Hire
 <hr style="color:white">
 <div class="row container">
 <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="color:white;font-size:30px">24,321
+<h1 style="color:white;font-size:30px;padding-left:50px;"><?php
+$link = mysqli_connect('localhost', 'root', '', 'jk');
+ if(!$link){ 
+die('Failed to connect to server'); 
+} 
+$query="SELECT count(*) as total from users";
+$results = mysqli_query($link,$query); 
+$log=mysqli_fetch_assoc($results);
+echo $log['total'];?>
 </h1>
 <p style="color:white">
 Registered Users
 </p>
 </div>
 <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="color:white;font-size:30px">3,245
+<h1 style="color:white;font-size:30px;padding-left:40px;"><?php
+$link = mysqli_connect('localhost', 'root', '', 'jk');
+ if(!$link){ 
+die('Failed to connect to server'); 
+} 
+$query="SELECT count(*) as total from project";
+$results = mysqli_query($link,$query); 
+$log=mysqli_fetch_assoc($results);
+echo $log['total'];?>
 </h1>
 <p style="color:white">
 Total Jobs Posted
