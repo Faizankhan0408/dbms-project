@@ -318,6 +318,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -329,18 +330,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }
@@ -464,6 +465,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -475,18 +477,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }
@@ -517,7 +519,7 @@ $results = mysqli_query($link,$query);
 while ($row = mysqli_fetch_assoc($results))
 {
 	?>
-<<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
+<div class="container" style="padding:50px;padding-left:50px;padding-right:50px;"  >
 	<h1 style="color:blue">
 	<?php
 	echo $row['ProjectName'];
@@ -609,6 +611,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -620,18 +623,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }
@@ -757,6 +760,7 @@ if($col['HireStatus'])
 
 </div>
 </center>
+
 	<?php
 }
 else
@@ -768,18 +772,18 @@ else
 Hire
 </button>
 </form>
-</div>
+
 
 <?php
 
 }
 	?>
-	
+	 </div>
 	<?php
 	
 }
   ?>
-  </div>
+ 
   </div>
     <?php
 }
@@ -891,6 +895,7 @@ goto name;
 chance:
 
 ?>
+
 <button type="button " hidden id="BID" name="BID" href="#" data-bs-toggle="modal" data-bs-target="#BidModal" class="btn btn-success" style=""></button>
 <div class="modal" tabindex="-1" id ="BidModal">
   <div class="modal-dialog">
