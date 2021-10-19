@@ -38,7 +38,21 @@
         </li>
 		</ul> 
     </div>
+		<?php 
+	session_start();
+	if(isset($_SESSION['IS_AUTHENTICATED']) && $_SESSION['IS_AUTHENTICATED'] == 1)
+	{
+	?>
+	 <a class="nav-link" href="logout.php">Log Out</a>
+	<?php 
+	}
+	else
+	{
+	?>
 	 <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+	<?php
+	}
+	?>
 	
 	
 	 <button class="navbar-brand btn btn-outline-success" style="border-radius:20px;" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
@@ -367,7 +381,7 @@
         <p class="lead">Browse freelancer profiles. Chat in real-time. Compare proposals and select the best one. Award your project and your freelancer starts work.</p>
         <h5 class="featurette-heading">3. Pay when you’re satisfied</h5>
         <p class="lead">Pay securely using our Milestone Payment system. Release payments when it has been completed and you're 100% satisfied.</p>
-        <a class="btn btn-outline-danger col-6 col-md-4" style="border-radius:10px" href="">Find work</a>
+        <a class="btn btn-outline-danger col-6 col-md-4" style="border-radius:10px" data-bs-target="#findWorkModal" data-bs-toggle="modal" href="">Find work</a>
       </div>
       <div class="col-md-5 order-md-1">
         <img src="how-it-works-1.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
@@ -409,8 +423,8 @@
 <p>
 <a style="text-decoration:none;color:white" href="graphics.php/#LogoDesign"  >Logo Design</a></br>
 <a style="text-decoration:none;color:white" href="graphics.php/#Photoshop"  >Photoshop</a></br>
-<a style="text-decoration:none;color:white" href="graphics.php/#AddsDesign" >Social Media Design</a></br>
-<a style="text-decoration:none;color:white" href="graphics.php/#SocialMediaDesign">Ads Design</a></br>
+<a style="text-decoration:none;color:white" href="graphics.php/#AddsDesign" >Adds Design</a></br>
+<a style="text-decoration:none;color:white" href="graphics.php/#SocialMediaDesign">Social Media Design</a></br>
 <a style="text-decoration:none;color:white" href="video.php/#LogoAnimation">Video Editing</a></br>
 <a style="text-decoration:none;color:white" href="video.php/#VideoEditing"	>Animated GIFs</a></br>
 <a style="text-decoration:none;color:white" href="video.php/#AnimatedGIF"	>Logo Animation</a></br>
@@ -429,7 +443,7 @@
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="font-size:30px;margin-bottom:25px;color:white">About</h1>
 <a style="text-decoration:none;color:white" href="About.php">About Us</a></br>
-<a style="text-decoration:none;color:white" href="">Leadership</a></br></br></br></br>
+<a style="text-decoration:none;color:white" href="leadership.php">Leadership</a></br></br></br></br>
 </div>
 
 <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">

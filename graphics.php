@@ -40,7 +40,21 @@ session_start();
         </li>
 		</ul> 
     </div>
+		<?php 
+	
+	if(isset($_SESSION['IS_AUTHENTICATED']) && $_SESSION['IS_AUTHENTICATED'] == 1)
+	{
+	?>
+	 <a class="nav-link" href="../logout.php">Log Out</a>
+	<?php 
+	}
+	else
+	{
+	?>
 	 <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+	<?php
+	}
+	?>
 	
 	
 	 <button class="navbar-brand btn btn-outline-success" style="border-radius:20px;" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
@@ -809,8 +823,8 @@ Hire
 <p>
 <a style="text-decoration:none;color:white" href="../graphics.php/#LogoDesign"  >Logo Design</a></br>
 <a style="text-decoration:none;color:white" href="../graphics.php/#Photoshop"  >Photoshop</a></br>
-<a style="text-decoration:none;color:white" href="../graphics.php/#AddsDesign" >Social Media Design</a></br>
-<a style="text-decoration:none;color:white" href="../graphics.php/#SocialMediaDesign">Ads Design</a></br>
+<a style="text-decoration:none;color:white" href="../graphics.php/#AddsDesign" >Adds Design</a></br>
+<a style="text-decoration:none;color:white" href="../graphics.php/#SocialMediaDesign">Social Media Design</a></br>
 <a style="text-decoration:none;color:white" href="../video.php/#LogoAnimation">Video Editing</a></br>
 <a style="text-decoration:none;color:white" href="../video.php/#VideoEditing"	>Animated GIFs</a></br>
 <a style="text-decoration:none;color:white" href="../video.php/#AnimatedGIF"	>Logo Animation</a></br>
