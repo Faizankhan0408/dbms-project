@@ -18,12 +18,12 @@ if($results == FALSE)
 {
 $_SESSION['status']="Email or Username taken or not filled";
             $_SESSION['status_code']="error";
-			include "main.html";
+			include "main.php";
 }
 else {
 	$_SESSION['status']="You are signed up";
             $_SESSION['status_code']="success";
-			include "main.html";
+			include "main.php";
 
 } 
 	}
@@ -31,7 +31,7 @@ else {
 else{
 	$_SESSION['status']="Please Enter Password";
             $_SESSION['status_code']="error";
-			include "main.html";
+			include "main.php";
 }
 }
 
@@ -39,7 +39,7 @@ else{
 else
 {$_SESSION['status']="Please fill your name";
             $_SESSION['status_code']="error";
-			include "main.html";
+			include "main.php";
 }
 include "script_log.php";
 ?> 
