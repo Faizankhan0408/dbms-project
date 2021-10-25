@@ -515,7 +515,7 @@ Hire
 ?>
 <!-- End of php -->
 <!--php for Wordpress-->
-<h1 id="Wordpress" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Wordpress</h1>
+<h1 id="WordPress" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">Wordpress</h1>
 
 
 
@@ -660,7 +660,7 @@ Hire
 }
 ?>
 <!--  php for AppDevelopment-->
-<h1 id="AppDevelopment" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">App Developmenr</h1>
+<h1 id="AppDevelopment" style="text-align:center;margin-top:100px;margin-bottom:100px;font-size:8vw">App Development</h1>
 
 
 
