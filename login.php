@@ -24,7 +24,7 @@ if($row['email']==$email && $row['password']==$password)
 		$_SESSION['IS_AUTHENTICATED'] = 1; 
 		$_SESSION['USER_EMAIL'] = $email;
 		$_SESSION['USER_NAME'] = $row['your_name'];
-		include "main.html";
+		include "main.php";
  goto chance;
 			
 		}
@@ -32,20 +32,20 @@ if($row['email']==$email && $row['password']==$password)
 }
 $_SESSION['status']="Invalid Credentials";
             $_SESSION['status_code']="error";
-	include "main.html";
+	include "main.php";
 	chance:
 	
 }
 else
 	{$_SESSION['status']="Please Enter Password";
             $_SESSION['status_code']="error";
-	include "main.html";
+	include "main.php";
 }
 }
 else
 {$_SESSION['status']="Please Enter Email";
             $_SESSION['status_code']="error";
-			include "main.html";
+			include "main.php";
 	
 	
 } 
@@ -55,7 +55,5 @@ include "script_log.php";
 		
 ?>
 
-		
-		
 		
 		
