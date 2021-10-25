@@ -84,7 +84,7 @@ $Sales_Marketing=0;
 else
 { $_SESSION['status']="Please Enter Project Name";
             $_SESSION['status_code']="error";
-			include "main.html";
+			include "main.php";
 	
 }
 
@@ -99,7 +99,7 @@ $results = mysqli_query($link, $query);
 
 	$_SESSION['status']="Project has been uploaded";
             $_SESSION['status_code']="success";
-			include "main.html";
+			include "main.php";
  
 	
 
@@ -107,7 +107,7 @@ $results = mysqli_query($link, $query);
 else
 	{$_SESSION['status']="Please Log In to Post";
             $_SESSION['status_code']="error";
-			include "main.html";
+			include "main.php";
 }
 include "script_log.php";
 ?>

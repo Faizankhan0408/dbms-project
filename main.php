@@ -221,7 +221,7 @@
 			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" style="margin-top:25px">
 			<input type="checkbox" class="btn-check" id="Game Development" autocomplete="off" name="GameDevelopment">
 			<label class="btn btn-outline-warning" for="Game Development">Game Development</label>
-			<input type="checkbox" class="btn-check" id="Wordpress" autocomplete="off" name="WordPress">
+			<input type="checkbox" class="btn-check" id="Wordpress" autocomplete="off" name="Wordpress">
 			<label class="btn btn-outline-warning" for="Wordpress">Wordpress</label>
 			<input type="checkbox" class="btn-check" id="App Development" autocomplete="off" name="AppDevelopment">
 			<label class="btn btn-outline-warning" for="App Development">App Development</label>
@@ -585,7 +585,7 @@ Explore The Marketplace
 <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="font-size:30px;margin-bottom:25px;color:white">About</h1>
 <a style="text-decoration:none;color:white" href="About.php">About Us</a></br>
-<a style="text-decoration:none;color:white" href="">Leadership</a></br></br></br></br>
+<a style="text-decoration:none;color:white" href="leadership.php">Leadership</a></br></br></br></br>
 </div>
 
 <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
