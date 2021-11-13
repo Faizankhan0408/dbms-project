@@ -484,7 +484,7 @@
                 <img src="about2.jfif" class="d-block w-100 " alt="">
 
                 <div class="carousel-caption ">
-                    <p class="caption text-light"> Explore the online Freenlance community
+                    <p class="caption text-light"> Explore the online freelance community
                         Turn ideas into Reality</p>
                     <!-- <a class="btn btn-outline-warning col-6 col-md-4" style="border-radius:10px" data-bs-target="#findWorkModal" data-bs-toggle="modal" href="">Find work</a>
                   <a class="btn btn-secondary col-6 col-md-4" data-bs-toggle="modal" data-bs-target="#HireTalentModal" style="border-radius:10px" href="">Hire Talent</a> -->
@@ -495,7 +495,7 @@
                 <img src="about1.jfif" class="d-block w-100" alt="">
 
                 <div class="carousel-caption ">
-                    <p class="caption text-light">Explore the online Freenlance community
+                    <p class="caption text-light">Explore the online freelance community
                         Turn ideas into Reality</p>
                     <!-- <a class="btn btn-outline-danger col-6 col-md-4" href="" data-bs-target="#findWorkModal" data-bs-toggle="modal" style="border-radius:10px" >Find work</a>
                   <a class="btn btn-warning col-6 col-md-4 " data-bs-toggle="modal" data-bs-target="#HireTalentModal" style="border-radius:10px" href="">Hire Talent</a> -->
@@ -510,7 +510,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
-      <img src="..." class="card-img-top" alt="Image">
+      <img src="tip.jpg" class="card-img-top" alt="Image">
       <div class="card-body">
         <h5 class="card-title">Tip of the day</h5>
         <p class="card-text">Connect with more experienced freelancers in your local area or online via social media or their websites. Sometimes they will have overflow work they need to refer on or can give you a few pointers.</p>
@@ -522,7 +522,7 @@
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="..." class="card-img-top" alt="Image">
+      <img src="content.jpg" class="card-img-top" alt="Image">
       <div class="card-body">
         <h5 class="card-title">What is Content Writing?</h5>
         <p class="card-text">Content writing is the process of planning, writing and editing web content, typically for digital marketing purposes. It can include writing blog posts and articles, scripts for videos and podcasts, as well as content for specific platforms, such as tweetstorms on Twitter or text posts on Reddit.</p>
@@ -534,7 +534,7 @@
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="..." class="card-img-top" alt="Image">
+      <img src="gig.png" class="card-img-top" alt="Image">
       <div class="card-body">
         <h5 class="card-title">What are some famous freelancing gigs?</h5>
         <p class="card-text">Programming, development, content writing, social media marketing, graphics, design and animation are some famous freelancing gigs.</p>
@@ -549,6 +549,7 @@
 
     <!--footer-->
 
+   
     <div style="background-color:rgb(22,30,44);padding-top:100px">
         <div class="row container" style="margin-left:50px">
             <div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
@@ -559,13 +560,13 @@
                 <p>
                     <a style="text-decoration:none;color:white" href="graphics.php/#LogoDesign">Logo Design</a></br>
                     <a style="text-decoration:none;color:white" href="graphics.php/#Photoshop">Photoshop</a></br>
-                    <a style="text-decoration:none;color:white" href="graphics.php/#AddsDesign">Social Media
+                    <a style="text-decoration:none;color:white" href="graphics.php/#AddsDesign">Adds
                         Design</a></br>
-                    <a style="text-decoration:none;color:white" href="graphics.php/#SocialMediaDesign">Ads
+                    <a style="text-decoration:none;color:white" href="graphics.php/#SocialMediaDesign">Social Media
                         Design</a></br>
-                    <a style="text-decoration:none;color:white" href="video.php/#LogoAnimation">Video Editing</a></br>
-                    <a style="text-decoration:none;color:white" href="video.php/#VideoEditing">Animated GIFs</a></br>
-                    <a style="text-decoration:none;color:white" href="video.php/#AnimatedGIF">Logo Animation</a></br>
+                    <a style="text-decoration:none;color:white" href="video.php/#LogoAnimation">Logo Animation</a></br>
+                    <a style="text-decoration:none;color:white" href="video.php/#VideoEditing">Video Editing</a></br>
+                    <a style="text-decoration:none;color:white" href="video.php/#AnimatedGIF">Animated GIFs</a></br>
                     <a style="text-decoration:none;color:white" href="writing.php/#ContentWriting">Content
                         Writing</a></br>
                     <a style="text-decoration:none;color:white" href="writing.php/#Translation">Translation</a></br>
@@ -576,31 +577,30 @@
                     <a style="text-decoration:none;color:white" href="tech.php/#AppDevelopment">Web Development</a></br>
                     <a style="text-decoration:none;color:white" href="music.php/#Voiceover">Voiceover</a></br>
                     <a style="text-decoration:none;color:white" href="music.php/#Remix_Mashup">Remix & Mashup</a></br>
-                    <a style="text-decoration:none;color:white" href="bussiness.php/#SocialMediaMarketing">Social Media
-                        Management</a></br>
+                    <a style="text-decoration:none;color:white" href="bussiness.php/#SocialMediaMarketing">Social Media Marketing</a></br>
                     <a style="text-decoration:none;color:white" href="bussiness.php/#Sales_Marketing">Sales &
                         Marketing</a></br></br></br></br>
             </div>
 
             <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
                 <h1 style="font-size:30px;margin-bottom:25px;color:white">About</h1>
-                <a style="text-decoration:none;color:white" href="">About Us</a></br>
-                <a style="text-decoration:none;color:white" href="">Leadership</a></br></br></br></br>
+                <a style="text-decoration:none;color:white" href="About.php">About Us</a></br>
+                <a style="text-decoration:none;color:white" href="leadership.php">Leadership</a></br></br></br></br>
             </div>
 
             <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
                 <h1 style="font-size:30px;margin-bottom:25px;color:white">Community</h1>
-                <a style="text-decoration:none;color:white" href="">Blogs</a></br>
-                <a style="text-decoration:none;color:white" href="">Videos</a></br></br></br></br>
+                <a style="text-decoration:none;color:white" href="blogs.php">Blogs</a></br>
+                <a style="text-decoration:none;color:white" href="videos.php">Videos</a></br></br></br></br>
             </div>
 
             <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
                 <h1 style="font-size:30px;margin-bottom:25px;color:white">Contact Us</h1>
-                <a style="text-decoration:none" href=""><i class="fab fa-facebook"
+                <a style="text-decoration:none" href="https://www.facebook.com"><i class="fab fa-facebook"
                         style="font-size:50px;margin-left:50px"></i></a></br></br>
-                <a style="text-decoration:none" href=""><i class="fab fa-linkedin"
+                <a style="text-decoration:none" href="https://www.linkedin.com"><i class="fab fa-linkedin"
                         style="font-size:50px;margin-left:50px;color:rgb(2,116,182)"></i></a></br></br>
-                <a style="text-decoration:none" href=""><i class="fab fa-youtube"
+                <a style="text-decoration:none" href="https://www.youtube.com"><i class="fab fa-youtube"
                         style="font-size:50px;margin-left:50px;color:red"></i></a></br></br></br></br></br>
             </div>
 
@@ -608,26 +608,42 @@
         <hr style="color:white">
         <div class="row container">
             <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-                <h1 style="color:white;font-size:30px">24,321
-                </h1>
-                <p style="color:white">
+                <h1 style="color:white;font-size:30px;padding-left:50px;"><?php
+$link = mysqli_connect('localhost', 'root', '', 'jk');
+ if(!$link){ 
+die('Failed to connect to server'); 
+} 
+$query="SELECT count(*) as total from users";
+$results = mysqli_query($link,$query); 
+$log=mysqli_fetch_assoc($results);
+echo $log['total'];?>
+</h1>
+<p style="color:white">
+                
                     Registered Users
-                </p>
-            </div>
-            <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-                <h1 style="color:white;font-size:30px">3,245
-                </h1>
-                <p style="color:white">
-                    Total Jobs Posted
-                </p>
-            </div>
-            <div class="col-xxl-6 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
+              </p>
+</div>
+<div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
+<h1 style="color:white;font-size:30px;padding-left:40px;"><?php
+$link = mysqli_connect('localhost', 'root', '', 'jk');
+ if(!$link){ 
+die('Failed to connect to server'); 
+} 
+$query="SELECT count(*) as total from project";
+$results = mysqli_query($link,$query); 
+$log=mysqli_fetch_assoc($results);
+echo $log['total'];?>
+</h1>
+<p style="color:white">
+Total Jobs Posted
+</p>
+</div>
+<div class="col-xxl-6 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
 
-                <p style="color:white">
-                    Job Karlo ® is a registered Trademark of Job Karlo Technology International Pvt Limited (UT74832B7)
-                    & Job Karlo Online India Pvt Limited (CO78789HGH2)
-                    Copyright © 2021 registered Trademark of Job Karlo Technology International Pvt Limited (UT74832B7)
-                </p>
+<p style="color:white">
+Job Karlo ® is a registered Trademark of Job Karlo Technology International Pvt Limited (UT74832B7)  & Job Karlo Online India Pvt Limited (CO78789HGH2)
+Copyright © 2021 registered Trademark of Job Karlo Technology International Pvt Limited (UT74832B7)
+</p>
             </div>
         </div>
     </div>

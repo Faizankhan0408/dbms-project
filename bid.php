@@ -13,7 +13,7 @@ die('Failed to connect to server');
 if($_SESSION['HIRER_ID'] == $_SESSION['USER_EMAIL'])
 {$_SESSION['status']="Can't Bid on Your own Project";
             $_SESSION['status_code']="error";
-	include"main.html";
+	include"main.php";
 
 }
 else
@@ -31,13 +31,13 @@ $results = mysqli_query($link,$query);
 
 	$_SESSION['status']="Your Bid is Successful";
             $_SESSION['status_code']="success";
-			include "main.html";
+			include "main.php";
 }
 }
 else
 {$_SESSION['status']="Please Login to Bid";
             $_SESSION['status_code']="error";
-	include"main.html";
+	include"main.php";
 }
 	include"script_log.php";
 }
