@@ -526,7 +526,8 @@ Explore The Marketplace
 				<!--feeback-->
 <div class="row container" style="margin-left:50px;margin-top:100px;margin-bottom:50px">
 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-<object data="feedback.mp4" width="400" height="230"></object>
+<video width="400" height="250" controls><source src="feedback.mp4" type="video/mp4"></video>
+ 
 </div>
 <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
 <h1 style="font-size:30px"> Rajat Gupta , CEO | Alphonso Pvt.Ltd</h1>
