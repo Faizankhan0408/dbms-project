@@ -396,7 +396,7 @@
       <img src="desk.jpg"  class="d-block w-100 " alt="">
 	  
 	  <div class="carousel-caption ">
-     <p class="caption"  > Explore the online Freenlance community 
+     <p class="caption"  > Explore the online freelance community 
 	  Turn ideas into Reality</p>
 	  <a class="btn btn-outline-warning col-6 col-md-4" style="border-radius:10px" data-bs-target="#findWorkModal" data-bs-toggle="modal" href="">Find work</a>
 	  <a class="btn btn-secondary col-6 col-md-4" data-bs-toggle="modal" data-bs-target="#HireTalentModal" style="border-radius:10px" href="">Hire Talent</a>
@@ -407,7 +407,7 @@
       <img src="pic-1.jpg" class="d-block w-100" alt="">
 
 	  	<div class="carousel-caption " >
-       <p class="caption" >Explore the online Freenlance community
+       <p class="caption" >Explore the online freelance community
 	  Turn ideas into Reality</p>
 	   <a class="btn btn-outline-danger col-6 col-md-4" href="" data-bs-target="#findWorkModal" data-bs-toggle="modal" style="border-radius:10px" >Find work</a>
 	  <a class="btn btn-warning col-6 col-md-4 " data-bs-toggle="modal" data-bs-target="#HireTalentModal" style="border-radius:10px" href="">Hire Talent</a>
@@ -524,14 +524,22 @@ Explore The Marketplace
 </div>
 <hr>
 				<!--feeback-->
-<div class="row container" style="margin-left:50px;margin-top:100px">
+<div class="row container" style="margin-left:50px;margin-top:100px;margin-bottom:50px">
 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-<object data="f2.png"></object>
+<object data="feedback.mp4" width="400" height="230"></object>
 </div>
 <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-<h1 style="font-size:30px"> Rajat Goyal , Commercial Manager | LIFE ADVISE</h1>
-<p class="para1" style="text-align:left; text-align-center;font-size:30px;font-color:black">"We have used Job Karlo for Web Development, Logo Design, Adds Design & Social Media Design. We had the ideas &
- Job Karlo gave us the means to implement them."</p>
+<h1 style="font-size:30px"> Rajat Gupta , CEO | Alphonso Pvt.Ltd</h1>
+<p class="para1" style="text-align:left; text-align-center;font-size:17px;font-color:black">"We are an E-Commerce startup,Launched in 2018. Being a Solo Founder of the Company
+ it was very difficult for me in the intial days to launch the product, Because the time was less and the work was more. So Here the Job Karlo platform 
+provided me with a lot  of Interns and Freelancers. They have a very good network of Social Media Interns 
+ and Web Development Interns. Because I worked with them and 
+ these people are really really great and due to there people I was able to launch my product in 3 months, It is a less Period if you talk in terms of startups 
+ . So I think its a really Good Platform 
+you can choose freelancers according to you, according to  range u have 
+means the cash flow you want . So I can think  its a really really  good platform  and 
+I would recommend all the aspiring  Entrepreneur and Startup founders
+ to aspire their work from Job Karlo."</p>
 
 </div>
 </div>
@@ -555,57 +563,66 @@ Explore The Marketplace
 
 <!--footer-->
 
-<div style="background-color:rgb(22,30,44);padding-top:100px">
-<div class="row container" style="margin-left:50px">
-<div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
- <img src="JK-1.png" height ="50" width="67"  style=""/></br></br></br></br></br>
-</div>
-<div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="font-size:30px;margin-bottom:25px;color:white">Categories</h1>
-<p>
-<a style="text-decoration:none;color:white" href="graphics.php/#LogoDesign"  >Logo Design</a></br>
-<a style="text-decoration:none;color:white" href="graphics.php/#Photoshop"  >Photoshop</a></br>
-<a style="text-decoration:none;color:white" href="graphics.php/#AddsDesign" >Adds Design</a></br>
-<a style="text-decoration:none;color:white" href="graphics.php/#SocialMediaDesign">Social Media Design</a></br>
-<a style="text-decoration:none;color:white" href="video.php/#LogoAnimation">Video Editing</a></br>
-<a style="text-decoration:none;color:white" href="video.php/#VideoEditing"	>Animated GIFs</a></br>
-<a style="text-decoration:none;color:white" href="video.php/#AnimatedGIF"	>Logo Animation</a></br>
-<a style="text-decoration:none;color:white" href="writing.php/#ContentWriting"	>Content Writing</a></br>
-<a style="text-decoration:none;color:white" href="writing.php/#Translation"	>Translation</a></br>
-<a style="text-decoration:none;color:white" href="tech.php/#WebDevelopment"	>Game Development</a></br>
-<a style="text-decoration:none;color:white" href="tech.php/#GameDevelopment"	>WordPress</a></br>
-<a style="text-decoration:none;color:white" href="tech.php/#WordPress"			>App Development</a></br>
-<a style="text-decoration:none;color:white" href="tech.php/#AppDevelopment"	>Web Development</a></br>
-<a style="text-decoration:none;color:white"   href="music.php/#Voiceover"	>Voiceover</a></br>
-<a style="text-decoration:none;color:white" href="music.php/#Remix_Mashup"	>Remix & Mashup</a></br>
-<a style="text-decoration:none;color:white"  href="bussiness.php/#SocialMediaMarketing"	>Social Media Management</a></br>
-<a style="text-decoration:none;color:white"  href="bussiness.php/#Sales_Marketing"		>Sales & Marketing</a></br></br></br></br>
-</div>
 
-<div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="font-size:30px;margin-bottom:25px;color:white">About</h1>
-<a style="text-decoration:none;color:white" href="About.php">About Us</a></br>
-<a style="text-decoration:none;color:white" href="leadership.php">Leadership</a></br></br></br></br>
-</div>
+    <div style="background-color:rgb(22,30,44);padding-top:100px">
+        <div class="row container" style="margin-left:50px">
+            <div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                <img src="JK-1.png" height="50" width="67" style="" /></br></br></br></br></br>
+            </div>
+            <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+                <h1 style="font-size:30px;margin-bottom:25px;color:white">Categories</h1>
+                <p>
+                    <a style="text-decoration:none;color:white" href="graphics.php/#LogoDesign">Logo Design</a></br>
+                    <a style="text-decoration:none;color:white" href="graphics.php/#Photoshop">Photoshop</a></br>
+                    <a style="text-decoration:none;color:white" href="graphics.php/#AddsDesign">Adds
+                        Design</a></br>
+                    <a style="text-decoration:none;color:white" href="graphics.php/#SocialMediaDesign">Social Media
+                        Design</a></br>
+                    <a style="text-decoration:none;color:white" href="video.php/#LogoAnimation">Logo Animation</a></br>
+                    <a style="text-decoration:none;color:white" href="video.php/#VideoEditing">Video Editing</a></br>
+                    <a style="text-decoration:none;color:white" href="video.php/#AnimatedGIF">Animated GIFs</a></br>
+                    <a style="text-decoration:none;color:white" href="writing.php/#ContentWriting">Content
+                        Writing</a></br>
+                    <a style="text-decoration:none;color:white" href="writing.php/#Translation">Translation</a></br>
+                    <a style="text-decoration:none;color:white" href="tech.php/#WebDevelopment">Game
+                        Development</a></br>
+                    <a style="text-decoration:none;color:white" href="tech.php/#GameDevelopment">WordPress</a></br>
+                    <a style="text-decoration:none;color:white" href="tech.php/#WordPress">App Development</a></br>
+                    <a style="text-decoration:none;color:white" href="tech.php/#AppDevelopment">Web Development</a></br>
+                    <a style="text-decoration:none;color:white" href="music.php/#Voiceover">Voiceover</a></br>
+                    <a style="text-decoration:none;color:white" href="music.php/#Remix_Mashup">Remix & Mashup</a></br>
+                    <a style="text-decoration:none;color:white" href="bussiness.php/#SocialMediaMarketing">Social Media Marketing</a></br>
+                    <a style="text-decoration:none;color:white" href="bussiness.php/#Sales_Marketing">Sales &
+                        Marketing</a></br></br></br></br>
+            </div>
 
-<div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="font-size:30px;margin-bottom:25px;color:white">Community</h1>
-<a style="text-decoration:none;color:white" href="">Blogs</a></br>
-<a style="text-decoration:none;color:white" href="">Videos</a></br></br></br></br>
-</div>
+            <div class="col-xxl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+                <h1 style="font-size:30px;margin-bottom:25px;color:white">About</h1>
+                <a style="text-decoration:none;color:white" href="About.php">About Us</a></br>
+                <a style="text-decoration:none;color:white" href="leadership.php">Leadership</a></br></br></br></br>
+            </div>
 
-<div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="font-size:30px;margin-bottom:25px;color:white">Contact Us</h1>
-<a style="text-decoration:none" href=""><i class="fab fa-facebook" style="font-size:50px;margin-left:50px"></i></a></br></br>
-<a style="text-decoration:none" href=""><i class="fab fa-linkedin" style="font-size:50px;margin-left:50px;color:rgb(2,116,182)"></i></a></br></br>
-<a style="text-decoration:none" href=""><i class="fab fa-youtube" style="font-size:50px;margin-left:50px;color:red"></i></a></br></br></br></br></br>
-</div>
+            <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
+                <h1 style="font-size:30px;margin-bottom:25px;color:white">Community</h1>
+                <a style="text-decoration:none;color:white" href="blogs.php">Blogs</a></br>
+                <a style="text-decoration:none;color:white" href="videos.php">Videos</a></br></br></br></br>
+            </div>
 
-</div>
-<hr style="color:white">
-<div class="row container">
-<div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
-<h1 style="color:white;font-size:30px;padding-left:50px;"><?php
+            <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
+                <h1 style="font-size:30px;margin-bottom:25px;color:white">Contact Us</h1>
+                <a style="text-decoration:none" href="https://www.facebook.com"><i class="fab fa-facebook"
+                        style="font-size:50px;margin-left:50px"></i></a></br></br>
+                <a style="text-decoration:none" href="https://www.linkedin.com"><i class="fab fa-linkedin"
+                        style="font-size:50px;margin-left:50px;color:rgb(2,116,182)"></i></a></br></br>
+                <a style="text-decoration:none" href="https://www.youtube.com"><i class="fab fa-youtube"
+                        style="font-size:50px;margin-left:50px;color:red"></i></a></br></br></br></br></br>
+            </div>
+
+        </div>
+        <hr style="color:white">
+        <div class="row container">
+            <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
+                <h1 style="color:white;font-size:30px;padding-left:50px;"><?php
 $link = mysqli_connect('localhost', 'root', '', 'jk');
  if(!$link){ 
 die('Failed to connect to server'); 
@@ -616,8 +633,9 @@ $log=mysqli_fetch_assoc($results);
 echo $log['total'];?>
 </h1>
 <p style="color:white">
-Registered Users
-</p>
+                
+                    Registered Users
+              </p>
 </div>
 <div class="col-xxl-2 col-lg-3  col-md-6 col-sm-6 col-xs-12 ">
 <h1 style="color:white;font-size:30px;padding-left:40px;"><?php
@@ -640,6 +658,7 @@ Total Jobs Posted
 Job Karlo ® is a registered Trademark of Job Karlo Technology International Pvt Limited (UT74832B7)  & Job Karlo Online India Pvt Limited (CO78789HGH2)
 Copyright © 2021 registered Trademark of Job Karlo Technology International Pvt Limited (UT74832B7)
 </p>
+
 </div>
 </div>
 </div>
